@@ -49,7 +49,7 @@ public class CustomerServiceTest {
     public void updateCustomer() {
         long id = 1L;
         Map<String, Object> fieldMap = new HashMap<>();
-        fieldMap.put("contact", "Eric");
+        fieldMap.put("concat", "Eric");
         boolean result = customerService.updateCustomer(id, fieldMap);
         Assert.assertTrue(result);
     }
