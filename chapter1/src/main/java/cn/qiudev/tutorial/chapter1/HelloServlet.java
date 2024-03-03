@@ -1,4 +1,4 @@
-package cn.qiudev.totorial.chapter1;
+package cn.qiudev.tutorial.chapter1;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
