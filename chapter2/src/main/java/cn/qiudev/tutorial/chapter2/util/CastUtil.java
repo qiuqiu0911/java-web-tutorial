@@ -1,10 +1,6 @@
 package cn.qiudev.tutorial.chapter2.util;
 
 /**
- * 数值操作工具类
- */
-
-/**
  * 转型操作工具类
  */
 public final class CastUtil {

@@ -1,10 +1,14 @@
 package cn.qiudev.tutorial.chapter2.service;
 
+import cn.qiudev.tutorial.chapter2.helper.DatabaseHelper;
 import cn.qiudev.tutorial.chapter2.model.Customer;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -18,8 +22,11 @@ public class CustomerServiceTest {
     }
 
     @Before
-    public void setUp() throws Exception {
-        // todo 初始化数据库
+    public void init() throws Exception {
+        // 初始化数据库
+        String file = "sql/customer_init.sql";
+        DatabaseHelper.executeSqlFile(file);
+
     }
 
     @Test
@@ -39,7 +46,7 @@ public class CustomerServiceTest {
     public void createCustomer() {
         Map<String, Object> fieldMap = new HashMap<>();
         fieldMap.put("name", "customer100");
-        fieldMap.put("contact", "John");
+        fieldMap.put("concat", "John");
         fieldMap.put("telephone", "13512345678");
         boolean result = customerService.createCustomer(fieldMap);
         Assert.assertTrue(result);
